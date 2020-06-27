@@ -1,0 +1,39 @@
+.pricing {
+  @include flex(row, center, center);
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5rem 10rem;
+  &-box {
+    border: 1px solid rgba($color-black, 0.1);
+    flex: 1 1 30rem;
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+
+    &-header {
+      border-bottom: 1px solid rgba($color-black, 0.1);
+      padding: 5rem 3rem;
+      position: relative;
+
+      &image1 {
+        width: 50%;
+      }
+
+      &__time {
+        font-size: var(--p);
+      }
+    }
+    &-main {
+      padding: 4rem 3rem;
+      ul {
+        li {
+          padding: 0.6rem;
+        }
+      }
+      p {
+        margin-left: 2rem;
+        display: inline-block;
+      }
+    }
+  }
+}

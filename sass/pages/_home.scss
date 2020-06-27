@@ -1,0 +1,33 @@
+.navigation {
+  min-height: 10vh;
+  @include centerAuto;
+}
+.header {
+  min-height: 90vh;
+  @include centerAuto;
+}
+.section-features {
+  min-height: 60vh;
+  background-color: $color-bg;
+  @include flex(row, flex-end, center);
+  position: relative;
+}
+.section-content {
+  min-height: 70vh;
+  @include centerAuto;
+  @include flex(row, center, center);
+}
+
+.section-pricing {
+  @include centerAuto;
+  min-height: 100vh;
+}
+
+.section-download {
+  min-height: 100vh;
+  @include flex(row, center, center);
+}
+
+.section-subscribe {
+  min-height: 20vh;
+}

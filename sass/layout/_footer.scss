@@ -1,0 +1,28 @@
+.footer {
+  //   @include flex(column, center, center);
+  @include centerAuto;
+  padding: 5rem 2rem;
+  &__section {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+
+    &-logo {
+      flex: 1 1 20rem;
+    }
+    &-links {
+      flex: 1 1 20rem;
+      padding: 4rem;
+
+      &--text {
+        color: $color-blue-dark;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__copyright {
+    &-text {
+      font-size: 1.6rem;
+      color: rgba($color-black, $alpha: 0.6);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.content {
+  &__text {
+    flex: 1 1 35rem;
+    padding: 5rem;
+  }
+  &__image {
+    flex: 1 1 35rem;
+
+    &--1 {
+      width: 70%;
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: flex-start;
+
+    &--input {
+      justify-self: flex-start;
+      padding: 1rem 3rem;
+      margin-right: 2rem;
+    }
+  }
+}

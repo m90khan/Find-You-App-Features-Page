@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102" height="100" viewBox="0 0 102 100">
+  <g id="yellow-rectangle" transform="translate(-1189 -1515)">
+    <rect id="Rectangle_447" data-name="Rectangle 447" width="94" height="92" rx="15" transform="translate(1189 1523)" fill="#ffe35a"/>
+    <g id="rectangle">
+      <g id="Rectangle_446" data-name="Rectangle 446" transform="translate(1199 1515)" fill="none" stroke="#3b5c91" stroke-width="2">
+        <rect width="92" height="92" rx="15" stroke="none"/>
+        <rect x="1" y="1" width="90" height="90" rx="14" fill="none"/>
+      </g>
+      <text id="_" data-name="" transform="translate(1245 1578)" fill="#15354b" font-size="43" font-family="SegoeUI, Segoe UI"><tspan x="-13.878" y="0"></tspan></text>
+    </g>
+  </g>
+</svg>
