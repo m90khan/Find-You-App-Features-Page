@@ -1,11 +1,24 @@
+/* 
+Media Queries Manager
+using good  appraoch: as very changes are being occur
+
+-phone 600
+-tab-port 600-900
+-tab-land 900-1200
+-big-desktop 1200-1800
+
+*/
 :root {
   --h1: calc(4.5rem + 1vw);
   --h2: calc(3.2rem + 1vw);
   --h3: calc(2.8rem + 1vw);
   --h4: calc(1.6rem + 1vw);
   --h5: calc(1.4rem + 1vw);
-  --footer: calc(0.4rem, 1vw);
-  --p: calc(0.2rem + 1vw); }
+  --footer: calc(0.4rem, 0.5vw);
+  --p: calc(0.5rem + 1vw); }
+  @media only screen and (max-width: 75em) {
+    :root {
+      --p: calc(1rem + 1vw); } }
 
 *,
 *::before,
@@ -17,6 +30,12 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-weight: 300;
@@ -203,11 +222,18 @@ p {
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 5rem 10rem; }
+  @media only screen and (max-width: 37.5em) {
+    .pricing {
+      padding: 2rem 1rem; } }
   .pricing-box {
     border: 1px solid rgba(16, 16, 16, 0.1);
-    flex: 1 1 30rem; }
+    flex: 1 1 35rem; }
     .pricing-box:not(:last-child) {
       margin-right: 5rem; }
+      @media only screen and (max-width: 62.5em) {
+        .pricing-box:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 2rem; } }
     .pricing-box-header {
       border-bottom: 1px solid rgba(16, 16, 16, 0.1);
       padding: 5rem 3rem;
@@ -224,29 +250,50 @@ p {
         margin-left: 2rem;
         display: inline-block; }
 
-.content__text {
-  flex: 1 1 35rem;
-  padding: 5rem; }
-
-.content__image {
-  flex: 1 1 35rem; }
-  .content__image--1 {
-    width: 70%; }
-
-.content__form {
-  display: flex;
-  justify-content: flex-start; }
-  .content__form--input {
-    justify-self: flex-start;
-    padding: 1rem 3rem;
-    margin-right: 2rem; }
+.content {
+  padding: 4rem 2rem; }
+  .content__text {
+    flex: 1 1 40rem;
+    padding: 4rem; }
+    @media only screen and (max-width: 75em) {
+      .content__text {
+        flex: 1 1 45rem;
+        padding: 2rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .content__text {
+        order: 1; } }
+  .content__image {
+    flex: 1 1 40rem;
+    text-align: center; }
+    @media only screen and (max-width: 75em) {
+      .content__image {
+        flex: 1 1 45rem;
+        padding: 2rem; } }
+    @media only screen and (max-width: 62.5em) {
+      .content__image {
+        order: 2; } }
+    .content__image--1 {
+      max-width: 70%;
+      object-fit: cover; }
+      @media only screen and (max-width: 75em) {
+        .content__image--1 {
+          max-width: 80%;
+          padding-top: 4rem; } }
+  .content__form {
+    display: flex;
+    justify-content: flex-start; }
+    .content__form--input {
+      justify-self: flex-start;
+      padding: 1rem 3rem;
+      margin-right: 2rem; }
 
 .navigation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  padding: 2rem; }
   .navigation__logo {
     display: flex;
     flex-direction: row;
@@ -262,7 +309,8 @@ p {
   .navigation__list {
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center; }
   .navigation__link {
     color: #15354b; }
@@ -282,9 +330,19 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10rem 20rem; }
+    padding: 10rem 15rem; }
+    @media only screen and (max-width: 75em) {
+      .header__heading {
+        padding: 8rem 8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .header__heading {
+        padding: 4rem 0; } }
   .header__image {
     max-width: 50%; }
+    @media only screen and (max-width: 75em) {
+      .header__image {
+        max-width: 80%;
+        padding: 2rem; } }
 
 .features {
   max-width: 80%;
@@ -294,8 +352,10 @@ p {
   justify-content: center;
   align-items: center;
   justify-content: space-around;
-  background-color: #eff8ff;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 56.25em) {
+    .features {
+      padding: 4rem 2rem; } }
 
 .content {
   display: flex;
@@ -310,9 +370,11 @@ p {
 .download-cover {
   background: #eff8ff;
   background-position: center;
-  width: 100%;
-  height: 70vh;
+  height: 70%;
   margin: auto; }
+  @media only screen and (max-width: 56.25em) {
+    .download-cover {
+      height: 100%; } }
 
 .download {
   display: flex;
@@ -323,7 +385,11 @@ p {
   margin: auto;
   flex-wrap: wrap; }
   .download__text {
-    flex: 2 1 40rem; }
+    flex: 2 1 40rem;
+    padding: 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .download__text {
+        flex: 2 1 40rem; } }
     .download__text--play {
       display: flex;
       flex-direction: row;
@@ -332,12 +398,19 @@ p {
       justify-content: space-between; }
   .download__image {
     flex: 1 1 40rem;
-    text-align: center;
-    height: 100%; }
-    .download__image-screen {
-      width: 80%;
+    text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .download__image {
+        flex: 1 1 50rem; } }
+    .download__image-link-screen {
+      width: 70%;
       position: relative;
       top: -10rem; }
+      @media only screen and (max-width: 56.25em) {
+        .download__image-link-screen {
+          width: 30%;
+          top: 0;
+          transform: rotate(-60deg); } }
 
 .subscribe {
   display: flex;
@@ -372,11 +445,21 @@ p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap; }
+    .footer__section > * {
+      padding: 4rem; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__section > * {
+          padding: 1rem; } }
     .footer__section-logo {
       flex: 1 1 20rem; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__section-logo {
+          flex: 1 1 30rem; } }
     .footer__section-links {
-      flex: 1 1 20rem;
-      padding: 4rem; }
+      flex: 1 1 20rem; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__section-links {
+          flex: 1 1 30rem; } }
       .footer__section-links--text {
         color: #15354b;
         font-size: 1.2rem; }
@@ -404,7 +487,7 @@ p {
   position: relative; }
 
 .section-content {
-  min-height: 70vh;
+  min-height: 80vh;
   max-width: 80%;
   margin: auto;
   display: flex;
@@ -415,10 +498,12 @@ p {
 .section-pricing {
   max-width: 80%;
   margin: auto;
-  min-height: 100vh; }
+  min-height: 100vh;
+  padding: 4rem 0; }
 
 .section-download {
   min-height: 100vh;
+  padding: 4rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;

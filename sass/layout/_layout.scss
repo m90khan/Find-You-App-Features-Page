@@ -1,6 +1,7 @@
 .navigation {
   @include flex(row, center, center);
   flex-wrap: wrap;
+  padding: 2rem;
   &__logo {
     @include flex(row, center, center);
     flex: 1 1 40rem;
@@ -11,9 +12,7 @@
   }
   &__list {
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex(row, space-around, center);
   }
   &__link {
     color: $color-blue-dark;
@@ -31,10 +30,21 @@
     background-position: center;
     @include flex(column, center, center);
 
-    padding: 10rem 20rem;
+    padding: 10rem 15rem;
+
+    @include respond(tab-land) {
+      padding: 8rem 8rem;
+    }
+    @include respond(phone) {
+      padding: 4rem 0;
+    }
   }
   &__image {
     max-width: 50%;
+    @include respond(tab-land) {
+      max-width: 80%;
+      padding: 2rem;
+    }
   }
 }
 
@@ -43,8 +53,10 @@
   margin-left: auto;
   @include flex(row, center, center);
   justify-content: space-around;
-  background-color: $color-bg;
   flex-wrap: wrap;
+  @include respond(tab-port) {
+    padding: 4rem 2rem;
+  }
 }
 
 .content {
@@ -59,9 +71,11 @@
 .download-cover {
   background: $color-bg;
   background-position: center;
-  width: 100%;
-  height: 70vh;
+  height: 70%;
   margin: auto;
+  @include respond(tab-port) {
+    height: 100%;
+  }
 }
 
 .download {
@@ -71,7 +85,10 @@
   flex-wrap: wrap;
   &__text {
     flex: 2 1 40rem;
-
+    padding: 4rem;
+    @include respond(tab-port) {
+      flex: 2 1 40rem;
+    }
     &--play {
       @include flex(row, center, center);
       justify-content: space-between;
@@ -79,13 +96,21 @@
   }
   &__image {
     flex: 1 1 40rem;
+    @include respond(tab-port) {
+      flex: 1 1 50rem;
+    }
     text-align: center;
-    height: 100%;
-
-    &-screen {
-      width: 80%;
-      position: relative;
-      top: -10rem;
+    &-link {
+      &-screen {
+        width: 70%;
+        position: relative;
+        top: -10rem;
+        @include respond(tab-port) {
+          width: 30%;
+          top: 0;
+          transform: rotate(-60deg);
+        }
+      }
     }
   }
 }

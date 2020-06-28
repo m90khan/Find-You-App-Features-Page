@@ -1,13 +1,35 @@
 .content {
+  padding: 4rem 2rem;
   &__text {
-    flex: 1 1 35rem;
-    padding: 5rem;
+    flex: 1 1 40rem;
+    padding: 4rem;
+    @include respond(tab-land) {
+      flex: 1 1 45rem;
+      padding: 2rem;
+    }
+    @media only screen and (max-width: 62.5em) {
+      order: 1;
+    }
   }
   &__image {
-    flex: 1 1 35rem;
+    flex: 1 1 40rem;
+    text-align: center;
+    @include respond(tab-land) {
+      flex: 1 1 45rem;
+      padding: 2rem;
+    }
+    @media only screen and (max-width: 62.5em) {
+      order: 2;
+    }
 
     &--1 {
-      width: 70%;
+      max-width: 70%;
+      object-fit: cover;
+
+      @include respond(tab-land) {
+        max-width: 80%;
+        padding-top: 4rem;
+      }
     }
   }
 

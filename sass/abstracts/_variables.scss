@@ -6,8 +6,11 @@
   --h3: calc(2.8rem + 1vw); // 40px
   --h4: calc(1.6rem + 1vw); // 28
   --h5: calc(1.4rem + 1vw);
-  --footer: calc(0.4rem, 1vw);
-  --p: calc(0.2rem + 1vw);
+  --footer: calc(0.4rem, 0.5vw);
+  --p: calc(0.5rem + 1vw);
+  @include respond(tab-land) {
+    --p: calc(1rem + 1vw);
+  }
 }
 
 //Colors

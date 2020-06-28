@@ -5,14 +5,23 @@
   &__section {
     @include flex(row, center, center);
     flex-wrap: wrap;
-
+    & > * {
+      padding: 4rem;
+      @include respond(phone) {
+        padding: 1rem;
+      }
+    }
     &-logo {
       flex: 1 1 20rem;
+      @include respond(phone) {
+        flex: 1 1 30rem;
+      }
     }
     &-links {
       flex: 1 1 20rem;
-      padding: 4rem;
-
+      @include respond(phone) {
+        flex: 1 1 30rem;
+      }
       &--text {
         color: $color-blue-dark;
         font-size: 1.2rem;

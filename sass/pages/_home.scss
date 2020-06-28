@@ -13,7 +13,7 @@
   position: relative;
 }
 .section-content {
-  min-height: 70vh;
+  min-height: 80vh;
   @include centerAuto;
   @include flex(row, center, center);
 }
@@ -21,10 +21,13 @@
 .section-pricing {
   @include centerAuto;
   min-height: 100vh;
+  padding: 4rem 0;
 }
 
 .section-download {
   min-height: 100vh;
+  padding: 4rem 0;
+
   @include flex(row, center, center);
 }
 
