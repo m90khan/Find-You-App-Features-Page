@@ -3,7 +3,11 @@
 <br />
 <p align="center">
   <a href="https://github.com/m90khan/Find-You-App-Features-Page/">
+<<<<<<< HEAD
     <img src="./img/logo.svg" alt="Logo" width="120" height="120">
+=======
+    <img src="./img/favicon.png" alt="Logo" width="120" height="120">
+>>>>>>> 2bfe8593909d395682cbf782dc28f033edbe3576
   </a>
 
   <h3 align="center">FindYou   </h3>
@@ -27,17 +31,24 @@ Live: https://github.com/m90khan/Find-You-App-Features-Page/
 
 Duration: 10 hrs - 3 days split
 
+<<<<<<< HEAD
 <img src="./img/FindYou-Cover.jpg" alt="" />
 
+=======
+>>>>>>> 2bfe8593909d395682cbf782dc28f033edbe3576
 ---
 
 #### Process
 
+<<<<<<< HEAD
 - Setup environment for final css will be compiled
 - Implementation of HTML structure
 - Applied component based styling
 
 <img src="./img/findyou.jpg" alt="" />
+=======
+<img src="./img/findyou.jpg">
+>>>>>>> 2bfe8593909d395682cbf782dc28f033edbe3576
 
 ---
 
@@ -57,6 +68,11 @@ Duration: 10 hrs - 3 days split
 
 ### Code Snippet
 
+<<<<<<< HEAD
+=======
+Api Fetch
+
+>>>>>>> 2bfe8593909d395682cbf782dc28f033edbe3576
 ```scss
 .pricing {
   @include flex(row, center, center);
