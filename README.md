@@ -8,8 +8,7 @@
 
   <h3 align="center">FindYou   </h3>
 
-  <p align="center">
-> App Landing Page
+  <p align="center"> App Landing Page
 <br />
     <a href="m90khan@gmail.com"><strong>Contact Me</strong></a>
     <br />
